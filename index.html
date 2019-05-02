@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rocket loader</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="loader">
+        <img id="rocket" class="idle" src="img/rocket.png" alt="rocket">
+
+        <img id="earth" src="img/earth.png" alt="earth">
+
+        <img id="mars" src="img/mars.png" alt="mars">
+
+        <img id="sun" src="img/sun.png" alt="sun">
+
+        <img id="comet" src="img/comet.png" alt="comet">
+        <img id="comet1" src="img/comet.png" alt="comet">
+        <img id="comet2" src="img/comet.png" alt="comet">
+        <img id="comet3" src="img/comet.png" alt="comet">
+        <img id="comet4" src="img/comet.png" alt="comet">
+        <img id="comet5" src="img/comet.png" alt="comet">
+    </div>
+
+    <div class="container" style="text-align: center">
+        <h1>Your Content Here</h1>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                $("#rocket").removeClass("idle");
+                $("#rocket").addClass("launch");
+            }, 4000);
+
+            setTimeout(function() {
+                $(".loader").fadeOut();
+                $(".container").css("display", "block");
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
